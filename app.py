@@ -35,7 +35,7 @@ if st.button("Recommend Assessments"):
         if not jd_url.strip():
             st.warning("Please enter a JD URL.")
             st.stop()
-        payload = {"url": jd_url.strip()}
+        payload = {"query": jd_url.strip()}
 
     try:
         with st.spinner("Finding best assessments..."):
