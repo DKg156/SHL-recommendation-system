@@ -1,7 +1,5 @@
-# SHL-recommendation-system
+# SHL GenAI Assessment Recommendation System
 Web-based RAG tool recommending assessments using SHL product catalog 
-
-SHL Assessment Recommendation System
 
 A semantic recommendation engine that suggests the most relevant SHL assessments based on a job description, hiring query, or job posting URL.
 
