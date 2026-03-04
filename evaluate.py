@@ -62,7 +62,6 @@ def evaluate(train_path: str):
         recalls.append(r10)
 
         print(f"\n=== Query {idx} ===")
-        print("QUERY:", query)
         print("Recall@10:", round(r10, 2))
 
     mean_recall = sum(recalls) / len(recalls)
