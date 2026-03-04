@@ -5,7 +5,7 @@ import streamlit as st
 
 st.set_page_config(page_title="SHL Recommender", layout="wide")
 
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = os.getenv("BACKEND_URL")
 
 st.title("SHL Assessment Recommendation Engine")
 
