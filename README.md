@@ -226,6 +226,8 @@ test_predictions.csv
 
 Running the System Locally
 
+pip install -r requirements.txt
+
 Start the backend:
 
 uvicorn src.api:app --host 0.0.0.0 --port 8000
