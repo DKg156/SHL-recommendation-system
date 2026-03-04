@@ -12,7 +12,6 @@ CATALOG_PATH = os.path.join("data", "catalog.json")
 INDEX_PATH = os.path.join("data", "faiss.index")
 META_PATH = os.path.join("data", "meta.json")
 
-# Keep this stable unless you also change recommender.py to match
 MODEL_NAME = os.getenv("EMBED_MODEL_NAME", "sentence-transformers/all-MiniLM-L6-v2")
 
 
