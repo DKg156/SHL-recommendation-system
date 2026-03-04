@@ -191,7 +191,12 @@ https://dkg156-shl-assessment-recommender.hf.space/recommend (POST)
 
 Evaluation
 
-Performance was evaluated and fine-tuned locally using Mean Recall@10 on the provided dataset.
+Performance was evaluated and fine-tuned locally using Mean Recall@10 on the provided dataset. The initial system consisted of sentence-transformer embeddings and FAISS retrieval with shallow candidate pools. Early retrieval depth used k = 25, which often excluded relevant assessments. Retrieval depth was first increased to k = 250 to maximize candidate recall, and then gradually reduced (150 → 90 → 80) to balance recall and ranking noise. Experiments showed that k = 90 produced the best Mean Recall@10 performance.
+Further improvements included:
+• refined embedding representations using metadata
+• URL canonicalization
+• catalog filtering
+• refined mixed-query balancing 
 
 Evaluation is performed using:
 
