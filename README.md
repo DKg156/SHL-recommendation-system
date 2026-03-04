@@ -22,27 +22,27 @@ System Architecture
 
 The system follows a two-stage retrieval architecture, commonly used in modern search and recommendation systems.
 
-User Query / Job Description / JD URL
-                │
-                ▼
-        Query Processing
-                │
-                ▼
-      Sentence Embedding Model
-                │
-                ▼
-        FAISS Vector Search
-       (Candidate Retrieval)
-                │
-                ▼
-        LLM Reranking
-        (Gemini Flash)
-                │
-                ▼
-      Balanced Selection Logic
-                │
-                ▼
-       Top-K Assessments Returned
+User Query / Job Description / JD URL<br>
+                │<br>
+                ▼<br>
+        Query Processing<br>
+                │<br>
+                ▼<br>
+      Sentence Embedding Model<br>
+                │<br>
+                ▼<br>
+        FAISS Vector Search<br>
+       (Candidate Retrieval)<br>
+                │<br>
+                ▼<br>
+        LLM Reranking<br>
+        (Gemini Flash)<br>
+                │<br>
+                ▼<br>
+      Balanced Selection Logic<br>
+                │<br>
+                ▼<br>
+       Top-K Assessments Returned<br>
 
 This architecture allows fast candidate retrieval while leveraging LLM reasoning to refine the final ranking.
 
@@ -132,31 +132,31 @@ This avoids returning results dominated by a single test type.
 
 Project Structure
 
-SHL-recommendation-system
-│
-├── data/                      # SHL catalog and FAISS index
-│
-├── docker/
-│   ├── backend/
-│   │   └── Dockerfile         # FastAPI container
-│   └── frontend/
-│       └── Dockerfile         # Streamlit container
-│
-├── src/
-│   ├── api.py                 # FastAPI endpoints
-│   ├── recommender.py         # Core recommendation logic
-│   ├── llm_rerank.py          # LLM reranking module
-│   └── jd_extract.py          # Job description extraction
-│
-├── build_index.py             # Builds FAISS index
-├── scrape_catalog.py          # SHL catalog scraping
-├── evaluate.py                # Training set evaluation
-├── generate_test_predictions.py
-│
-├── app.py                     # Streamlit frontend
-├── requirements.txt
-└── README.md
-
+SHL-recommendation-system<br>
+│<br>
+├── data/                      # SHL catalog and FAISS index<br>
+│<br>
+├── docker/<br>
+│   ├── backend/<br>
+│   │   └── Dockerfile         # FastAPI container<br>
+│   └── frontend/<br>
+│       └── Dockerfile         # Streamlit container<br>
+│<br>
+├── src/<br>
+│   ├── api.py                 # FastAPI endpoints<br>
+│   ├── recommender.py         # Core recommendation logic<br>
+│   ├── llm_rerank.py          # LLM reranking module<br>
+│   └── jd_extract.py          # Job description extraction<br>
+│<br>
+├── build_index.py             # Builds FAISS index<br>
+├── scrape_catalog.py          # SHL catalog scraping<br>
+├── evaluate.py                # Training set evaluation<br>
+├── generate_test_predictions.py<br>
+│<br>
+├── app.py                     # Streamlit frontend<br>
+├── requirements.txt<br>
+└── README.md<br>
+<br>
 ---
 
 API Endpoint
@@ -198,15 +198,15 @@ Evaluation is performed using:
 
 python evaluate.py
 
-<img width="2528" height="1041" alt="Screenshot 2026-03-05 023250" src="https://github.com/user-attachments/assets/913def4b-1772-446d-8a7a-9d3cf374c2ac" />
+<img width="252" height="104" alt="Screenshot 2026-03-05 023250" src="https://github.com/user-attachments/assets/913def4b-1772-446d-8a7a-9d3cf374c2ac" />
 
-<img width="1074" height="1170" alt="1" src="https://github.com/user-attachments/assets/cbfc57bd-b06a-4008-a129-345b42dbd5bb" />
+<img width="107" height="117" alt="1" src="https://github.com/user-attachments/assets/cbfc57bd-b06a-4008-a129-345b42dbd5bb" />
 
-<img width="1055" height="1172" alt="2" src="https://github.com/user-attachments/assets/18284ba1-2628-46f9-b0e6-f518be5dcd4f" />
+<img width="105" height="117" alt="2" src="https://github.com/user-attachments/assets/18284ba1-2628-46f9-b0e6-f518be5dcd4f" />
 
-<img width="1057" height="1177" alt="3" src="https://github.com/user-attachments/assets/f5c3301b-bd1e-4c3a-b393-2572382f40a6" />
+<img width="105" height="117" alt="3" src="https://github.com/user-attachments/assets/f5c3301b-bd1e-4c3a-b393-2572382f40a6" />
 
-<img width="1057" height="1169" alt="4" src="https://github.com/user-attachments/assets/e3e7c772-e37c-48f0-93d5-096cb3719310" />
+<img width="105" height="116" alt="4" src="https://github.com/user-attachments/assets/e3e7c772-e37c-48f0-93d5-096cb3719310" />
 
 
 
