@@ -22,8 +22,6 @@ System Architecture
 
 The system follows a two-stage retrieval architecture, commonly used in modern search and recommendation systems.</br>
 
-A catalog of individual test solutions scraped from the SHL website was generated using the scrape_catalog.py script and stored as catalog.json. 
-
 User Query / Job Description / JD URL<br>
             &nbsp;&nbsp;&nbsp;│<br>
              &nbsp;&nbsp;▼<br>
@@ -51,6 +49,7 @@ This architecture allows fast candidate retrieval while leveraging LLM reasoning
 ---
 
 System Components
+ 
 
 1. Query Processing
 
@@ -136,7 +135,7 @@ Project Structure
 
 SHL-recommendation-system<br>
 │<br>
-├── data/                      &nbsp;# SHL catalog and FAISS index<br>
+├── data/                      &nbsp;# SHL catalog and FAISS index stored<br>
 │<br>
 ├── docker/<br>
 │   ├── backend/<br>
