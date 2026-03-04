@@ -5,7 +5,7 @@ SHL Assessment Recommendation System
 
 A semantic recommendation engine that suggests the most relevant SHL assessments based on a job description, hiring query, or job posting URL.
 
-The system combines vector retrieval and LLM reranking to produce accurate and diverse recommendations.
+The system combines vector retrieval and LLM reranking to produce accurate and diverse recommendations. 
 
 ---
 
@@ -21,6 +21,8 @@ Technologies Used
 System Architecture
 
 The system follows a two-stage retrieval architecture, commonly used in modern search and recommendation systems.</br>
+
+A catalog of individual test solutions scraped from the SHL website was generated using the scrape_catalog.py script and stored as catalog.json. 
 
 User Query / Job Description / JD URL<br>
             &nbsp;&nbsp;&nbsp;│<br>
