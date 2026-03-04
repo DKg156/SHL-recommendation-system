@@ -133,7 +133,7 @@ Project Structure
 
 SHL-recommendation-system<br>
 │<br>
-├── data/                      &nbsp;# SHL catalog and FAISS index stored<br>
+├── data/                      &nbsp;# SHL catalog (377 items) and FAISS index stored<br>
 │<br>
 ├── docker/<br>
 │   ├── backend/<br>
