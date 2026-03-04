@@ -5,7 +5,7 @@ SHL Assessment Recommendation System
 
 A semantic recommendation engine that suggests the most relevant SHL assessments based on a job description, hiring query, or job posting URL.
 
-The system combines vector retrieval and LLM reranking to produce accurate and diverse recommendations. Candidate assessments are retrieved using embedding similarity and then reranked using an LLM to improve relevance.
+The system combines vector retrieval and LLM reranking to produce accurate and diverse recommendations.
 
 ---
 
@@ -16,32 +16,32 @@ Technologies Used
 - Streamlit
 - FAISS
 - Sentence Transformers
-- Google Gemini Flash
+- Gemini Flash
 
 System Architecture
 
-The system follows a two-stage retrieval architecture, commonly used in modern search and recommendation systems.
+The system follows a two-stage retrieval architecture, commonly used in modern search and recommendation systems.</br>
 
 User Query / Job Description / JD URL<br>
-                │<br>
-                ▼<br>
+            &nbsp;&nbsp;&nbsp;│<br>
+             &nbsp;&nbsp;▼<br>
         Query Processing<br>
-                │<br>
-                ▼<br>
+           &nbsp;&nbsp;&nbsp;│<br>
+          &nbsp;&nbsp;▼<br>
       Sentence Embedding Model<br>
-                │<br>
-                ▼<br>
+          &nbsp;&nbsp;&nbsp;│<br>
+         &nbsp;&nbsp;▼<br>
         FAISS Vector Search<br>
        (Candidate Retrieval)<br>
-                │<br>
-                ▼<br>
+        &nbsp;&nbsp;&nbsp;│<br>
+        &nbsp;&nbsp;▼<br>
         LLM Reranking<br>
         (Gemini Flash)<br>
-                │<br>
-                ▼<br>
+          &nbsp;&nbsp;&nbsp;│<br>
+        &nbsp;&nbsp;▼<br>
       Balanced Selection Logic<br>
-                │<br>
-                ▼<br>
+           &nbsp;&nbsp;&nbsp;│<br>
+          &nbsp;&nbsp;▼<br>
        Top-K Assessments Returned<br>
 
 This architecture allows fast candidate retrieval while leveraging LLM reasoning to refine the final ranking.
@@ -134,36 +134,36 @@ Project Structure
 
 SHL-recommendation-system<br>
 │<br>
-├── data/                      # SHL catalog and FAISS index<br>
+├── data/                      &nbsp;# SHL catalog and FAISS index<br>
 │<br>
 ├── docker/<br>
 │   ├── backend/<br>
-│   │   └── Dockerfile         # FastAPI container<br>
+│   │   └── Dockerfile         <br>
 │   └── frontend/<br>
-│       └── Dockerfile         # Streamlit container<br>
+│       └── Dockerfile         <br>
 │<br>
 ├── src/<br>
-│   ├── api.py                 # FastAPI endpoints<br>
-│   ├── recommender.py         # Core recommendation logic<br>
-│   ├── llm_rerank.py          # LLM reranking module<br>
-│   └── jd_extract.py          # Job description extraction<br>
+│   ├── api.py                 &nbsp;# FastAPI endpoints<br>
+│   ├── recommender.py         &nbsp;# Core recommendation logic<br>
+│   ├── llm_rerank.py          &nbsp;# LLM reranking module<br>
+│   └── jd_extract.py          &nbsp;# JD from URL extraction<br>
 │<br>
-├── build_index.py             # Builds FAISS index<br>
-├── scrape_catalog.py          # SHL catalog scraping<br>
-├── evaluate.py                # Training set evaluation<br>
-├── generate_test_predictions.py<br>
+├── build_index.py            &nbsp;# Builds FAISS index<br>
+├── scrape_catalog.py          &nbsp;# SHL catalog scraping script<br>
+├── evaluate.py                &nbsp;# Training set evaluation script<br>
+├── generate_test_predictions.py    &nbsp;# Test set predictions script<br>
 │<br>
-├── app.py                     # Streamlit frontend<br>
+├── app.py                     &nbsp;# Streamlit app<br>
 ├── requirements.txt<br>
 └── README.md<br>
 <br>
+
+
 ---
 
 API Endpoint
 
-The backend exposes a FastAPI endpoint for generating recommendations.
-
-Endpoint:
+The backend exposes an endpoint for generating recommendations.
 
 POST /recommend
 
@@ -181,11 +181,11 @@ The system is deployed as two services.
 
 Streamlit app:
 
-https://dkg156-recommender-frontend.hf.space/
+https://dkg156-recommender-frontend.hf.space/                <br>
 
 API endpoints:
 
-https://dkg156-shl-assessment-recommender.hf.space/health  (GET)
+https://dkg156-shl-assessment-recommender.hf.space/health  (GET)           <br>
 https://dkg156-shl-assessment-recommender.hf.space/recommend (POST)
 
 ---
@@ -198,15 +198,15 @@ Evaluation is performed using:
 
 python evaluate.py
 
-<img width="252" height="104" alt="Screenshot 2026-03-05 023250" src="https://github.com/user-attachments/assets/913def4b-1772-446d-8a7a-9d3cf374c2ac" />
+<img width="750" height="500" alt="Screenshot 2026-03-05 023250" src="https://github.com/user-attachments/assets/913def4b-1772-446d-8a7a-9d3cf374c2ac" />  <br>
 
-<img width="107" height="117" alt="1" src="https://github.com/user-attachments/assets/cbfc57bd-b06a-4008-a129-345b42dbd5bb" />
+<img width="400" height="500" alt="1" src="https://github.com/user-attachments/assets/cbfc57bd-b06a-4008-a129-345b42dbd5bb" />     <br>
 
-<img width="105" height="117" alt="2" src="https://github.com/user-attachments/assets/18284ba1-2628-46f9-b0e6-f518be5dcd4f" />
+<img width="400" height="500" alt="2" src="https://github.com/user-attachments/assets/18284ba1-2628-46f9-b0e6-f518be5dcd4f" />    <br>
 
-<img width="105" height="117" alt="3" src="https://github.com/user-attachments/assets/f5c3301b-bd1e-4c3a-b393-2572382f40a6" />
+<img width="400" height="500" alt="3" src="https://github.com/user-attachments/assets/f5c3301b-bd1e-4c3a-b393-2572382f40a6" />    <br>
 
-<img width="105" height="116" alt="4" src="https://github.com/user-attachments/assets/e3e7c772-e37c-48f0-93d5-096cb3719310" />
+<img width="400" height="500" alt="4" src="https://github.com/user-attachments/assets/e3e7c772-e37c-48f0-93d5-096cb3719310" />     <br>
 
 
 
@@ -229,10 +229,3 @@ uvicorn src.api:app --host 0.0.0.0 --port 8000
 Start the frontend:
 
 streamlit run app.py
-
----
-
-
----
-
-
