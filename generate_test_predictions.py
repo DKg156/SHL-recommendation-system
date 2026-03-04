@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-API_URL = "http://localhost:8000/recommend"
+API_URL = "https://dkg156-shl-assessment-recommender.hf.space/recommend"
 
 def generate_predictions(path: str, out_csv: str = "test_predictions.csv", k: int = 10):
     df = pd.read_excel(path, sheet_name="Test-Set")
