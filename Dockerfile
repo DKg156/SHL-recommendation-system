@@ -11,3 +11,5 @@ COPY . .
 RUN python build_index.py
 
 CMD uvicorn src.api:app --host 0.0.0.0 --port 7860
+
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
